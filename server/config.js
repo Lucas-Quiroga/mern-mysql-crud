@@ -1,1 +1,3 @@
-export const PORT = 4000;
+import { config } from "dotenv";
+
+config();
