@@ -6,7 +6,13 @@ export const getTasks = async (req, res) => {
       "SELECT * FROM tasks ORDER BY createAt ASC"
     );
 
-    res.json(result);
+    if (result.length === 0) {
+      // No hay tareas, devolver un mensaje específico
+      res.json({ message: "No hay tareas disponibles." });
+    } else {
+      // Hay tareas, devolver el resultado normalmente
+      res.json(result);
+    }
   } catch (error) {
     console.error("Error in getTasks:", error);
     res.status(500).json({ message: "Internal Server Error" });
