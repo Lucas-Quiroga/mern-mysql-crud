@@ -5,11 +5,13 @@ import TaskForm from "./pages/TaskForm";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import TaskContextProvider from "./context/TaskContext";
+import BannerInfo from "./components/BannerInfo";
 
 function App() {
   return (
     <div className="h-screen">
       <Navbar />
+      <BannerInfo />
       <div className="container mx-auto py-4">
         <TaskContextProvider>
           <Routes>

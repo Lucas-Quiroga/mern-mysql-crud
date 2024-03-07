@@ -47,22 +47,24 @@ const TaskForm = () => {
         }}
       >
         {({ handleChange, handleSubmit, values, isSubmitting }) => (
-          <div class="flex flex-col items-center justify-center mt-[10rem] light">
-            <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+          <div className="flex flex-col items-center justify-center mt-[10rem] light">
+            <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {params.id ? "Edit task" : "Create Task"}
               </h2>
               <Form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <label class="text-base font-medium text-gray-900">title</label>
+                <label className="text-base font-medium text-gray-900">
+                  title
+                </label>
                 <input
                   type="text"
                   name="title"
                   placeholder="Write a title"
                   onChange={handleChange}
                   value={values.title}
-                  class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                 />
-                <label class="text-base font-medium text-gray-900">
+                <label className="text-base font-medium text-gray-900">
                   Description
                 </label>
                 <textarea
@@ -71,12 +73,12 @@ const TaskForm = () => {
                   placeholder="Write a description"
                   onChange={handleChange}
                   value={values.description}
-                  class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                 ></textarea>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  class="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
+                  className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
                   {isSubmitting ? "Saving..." : "Save"}
                 </button>

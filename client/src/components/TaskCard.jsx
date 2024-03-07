@@ -12,26 +12,26 @@ const TaskCard = ({ task }) => {
 
   return (
     <>
-      <section class="mb-2 border bg-neutral-100 p-4 rounded-lg max-w-full mx-3 lg:mx-2">
-        <div class="mx-auto">
-          <div class="card md:flex max-w-lg">
-            <div class="flex-grow text-center md:text-left">
+      <section className="mb-2 border bg-neutral-100 p-4 rounded-lg max-w-full mx-3 lg:mx-2">
+        <div className="mx-auto">
+          <div className="card md:flex max-w-lg">
+            <div className="flex-grow text-center md:text-left">
               <header className="flex justify-between">
-                <p class="font-bold text-xl">{task.title}</p>
+                <p className="font-bold text-xl">{task.title}</p>
                 <span>{task.done === 1 ? "✅" : "❌"}</span>
               </header>
-              <h3 class="text-xl heading">{task.createAt}</h3>
-              <p class="mt-2 mb-3">{task.description}</p>
+              <h3 className="text-xl heading">{task.createAt}</h3>
+              <p className="mt-2 mb-3">{task.description}</p>
               <div className="flex gap-x-3 flex-wrap">
                 <button
-                  class="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+                  className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
                   onClick={() => deleteTask(task.id)}
                 >
                   <svg
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5 mr-2"
+                    className="h-5 w-5 mr-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -44,13 +44,13 @@ const TaskCard = ({ task }) => {
                   Delete
                 </button>
                 <button
-                  class="inline-flex items-center px-4 py-2 bg-blue-600 transition ease-in-out delay-75 hover:bg-blue-600 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 transition ease-in-out delay-75 hover:bg-blue-600 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
                   onClick={() => navigate(`/edit/${task.id}`)}
                 >
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
-                    class="h-5 w-5 mr-2"
+                    className="h-5 w-5 mr-2"
                     stroke="#ffffff"
                   >
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -80,7 +80,7 @@ const TaskCard = ({ task }) => {
                   Edit
                 </button>
                 <button
-                  class="inline-flex items-center px-4 py-2 bg-gray-600 transition ease-in-out delay-75 hover:bg-gray-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
+                  className="inline-flex items-center px-4 py-2 bg-gray-600 transition ease-in-out delay-75 hover:bg-gray-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110"
                   onClick={() => {
                     handleDone(task.id);
                     window.location.reload();
