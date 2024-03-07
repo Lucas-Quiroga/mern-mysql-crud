@@ -7,7 +7,15 @@ import { PORT } from "./config.js";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://mern-mysql.netlify.app",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+  allowedHeaders: "Content-Type, Authorization",
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
