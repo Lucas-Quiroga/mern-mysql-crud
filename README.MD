@@ -4,7 +4,7 @@ This MERN (MySQL, Express.js, React, Node.js) application provides basic functio
 
 ## Preview Image 👁
 
-![App Preview]()
+![App Preview](/app.png")
 
 ## Deployment 📦
 

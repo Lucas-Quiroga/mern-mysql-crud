@@ -10,7 +10,14 @@ const TaskPage = () => {
   }, []);
 
   function renderMain() {
-    if (tasks.length === 0) return <h1>No tasks yet</h1>;
+    if (!Array.isArray(tasks)) {
+      // console.error("Error: tasks is not an array", tasks);
+      return <h1 className="text-2xl text-white">No tasks found</h1>;
+    }
+
+    if (tasks.length === 0)
+      return <h1 className="text-2xl text-white">No tasks found</h1>;
+
     return tasks.map((task, index) => <TaskCard task={task} key={index} />);
   }
 
